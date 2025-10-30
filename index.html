@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News Feed App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="theme-transition bg-light text-dark dark:bg-dark dark:text-light">
+
+  <!-- Header -->
+  <nav class="navbar">
+    <h1>News Feed</h1>
+    <button id="themeToggle">🌙 Dark</button>
+  </nav>
+
+  <!-- Search Section -->
+  <section class="search-section">
+    <input id="searchInput" type="text" placeholder="Search articles...">
+    <div class="categories">
+      <button class="category active" data-category="all">All</button>
+      <button class="category" data-category="technology">Technology</button>
+      <button class="category" data-category="business">Business</button>
+      <button class="category" data-category="sports">Sports</button>
+      <button class="category" data-category="health">Health</button>
+      <button class="category" data-category="science">Science</button>
+      <button class="category" data-category="entertainment">Entertainment</button>
+    </div>
+  </section>
+
+  <!-- News Grid -->
+  <section id="newsContainer" class="news-grid"></section>
+
+  <div class="center">
+    <button id="loadMoreBtn">Load More</button>
+  </div>
+
+  <div id="statusMessage" class="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
